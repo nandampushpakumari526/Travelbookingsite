@@ -1,0 +1,910 @@
+
+/* =================================
+   TRAVELGO BUS BOOKING
+================================= */
+
+.tg-bus-page {
+    min-height: 100vh;
+    background: #f4f7fb;
+    color: #172b46;
+    font-family: "Segoe UI", Arial, sans-serif;
+    padding-bottom: 70px;
+}
+
+/* HERO SECTION */
+
+.tg-bus-hero {
+    min-height: 460px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background:
+        url("https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=2000&q=85");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.tg-bus-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(5, 20, 43, 0.94),
+        rgba(7, 34, 65, 0.80),
+        rgba(8, 30, 54, 0.25)
+    );
+}
+
+.tg-bus-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 70px;
+}
+
+.tg-bus-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #d9e8f8;
+    margin-bottom: 25px;
+}
+
+.tg-bus-hero-label span {
+    width: 28px;
+    height: 2px;
+    background: #ffb703;
+}
+
+.tg-bus-hero-content h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    margin-bottom: 20px;
+}
+
+.tg-bus-hero-content h1 span {
+    color: #ffbd35;
+}
+
+.tg-bus-hero-content > p {
+    max-width: 510px;
+    color: #d3dfed;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.tg-bus-hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+    color: #f0f5fb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* MAIN CONTAINER */
+
+.tg-bus-container {
+    max-width: 1160px;
+    position: relative;
+    z-index: 3;
+    margin-top: -70px;
+}
+
+.tg-bus-eyebrow {
+    color: #e49a00;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* SEARCH PANEL */
+
+.tg-bus-search {
+    background: white;
+    padding: 38px;
+    border-radius: 17px;
+    box-shadow: 0 15px 50px rgba(19, 42, 70, 0.12);
+}
+
+.tg-bus-search-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.tg-bus-search-heading h2 {
+    font-size: 27px;
+    font-weight: 800;
+    color: #152f4c;
+    margin: 7px 0;
+}
+
+.tg-bus-search-heading p {
+    font-size: 14px;
+    color: #8793a2;
+    margin: 0;
+}
+
+.tg-bus-search-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: #edf5ff;
+    color: #1976c9;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+/* INPUTS */
+
+.tg-bus-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.tg-bus-input {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    height: 54px;
+    padding: 0 14px;
+    background: #f7f9fc;
+    border: 1px solid #e5eaf0;
+    border-radius: 9px;
+    transition: 0.25s;
+}
+
+.tg-bus-input:focus-within {
+    background: white;
+    border-color: #2685d5;
+    box-shadow: 0 0 0 3px rgba(38, 133, 213, 0.10);
+}
+
+.tg-bus-input > span {
+    font-size: 19px;
+    color: #2480ca;
+}
+
+.tg-bus-input input {
+    width: 100%;
+    min-width: 0;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #1c3551;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tg-bus-input input::placeholder {
+    color: #a0aab7;
+    font-weight: 400;
+}
+
+/* SEARCH BUTTON */
+
+.tg-bus-search-button {
+    margin-top: 27px;
+    border: none;
+    border-radius: 9px;
+    padding: 14px 30px;
+    background: #ffb703;
+    color: #132b46;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 16px rgba(255, 183, 3, 0.20);
+}
+
+.tg-bus-search-button:hover {
+    background: #f29a00;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ERROR */
+
+.tg-bus-error {
+    margin-top: 20px;
+    padding: 14px 18px;
+    border-radius: 9px;
+    background: #fff0f0;
+    border: 1px solid #ffd5d5;
+    color: #c0392b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tg-bus-error span {
+    display: inline-grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #d94a4a;
+    color: white;
+}
+
+/* RESULTS */
+
+.tg-bus-results {
+    margin-top: 55px;
+}
+
+.tg-bus-results-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.tg-bus-results-heading h2 {
+    color: #172f4b;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 6px 0;
+}
+
+.tg-bus-results-heading p {
+    color: #7d8998;
+    font-size: 14px;
+    margin: 0;
+}
+
+.tg-bus-results-heading p span {
+    color: #e49a00;
+    padding: 0 8px;
+    font-weight: 800;
+}
+
+.tg-bus-count {
+    padding: 10px 16px;
+    border-radius: 30px;
+    background: #e8f2ff;
+    color: #1769ae;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* BUS TICKET */
+
+.tg-bus-ticket {
+    background: white;
+    border: 1px solid #e8edf3;
+    border-radius: 14px;
+    margin-bottom: 17px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 18px rgba(20, 44, 73, 0.04);
+}
+
+.tg-bus-ticket:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(20, 44, 73, 0.09);
+}
+
+.tg-bus-ticket.tg-bus-selected {
+    border: 2px solid #20a36b;
+    background: #fcfffd;
+}
+
+.tg-bus-ticket-main {
+    display: grid;
+    grid-template-columns: 1.1fr 2.2fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 27px;
+}
+
+/* OPERATOR */
+
+.tg-bus-operator {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.tg-bus-operator-icon {
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: #edf5ff;
+    color: #1976c9;
+    font-size: 23px;
+}
+
+.tg-bus-operator h4 {
+    color: #1c3551;
+    font-size: 15px;
+    font-weight: 800;
+    margin: 0 0 5px;
+}
+
+.tg-bus-operator span {
+    color: #9aa5b2;
+    font-size: 12px;
+}
+
+/* BUS ROUTE */
+
+.tg-bus-route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.tg-bus-route-point h3 {
+    color: #173451;
+    font-size: 23px;
+    font-weight: 800;
+    margin: 0 0 6px;
+}
+
+.tg-bus-route-point span {
+    color: #8b98a8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tg-bus-route-middle {
+    flex: 1;
+    text-align: center;
+    min-width: 75px;
+}
+
+.tg-bus-route-middle > span {
+    display: block;
+    color: #9aa5b2;
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+
+.tg-bus-route-line {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #2383cf;
+}
+
+.tg-bus-route-line i {
+    height: 1px;
+    flex: 1;
+    background: #c6d9eb;
+}
+
+.tg-bus-route-line span {
+    font-size: 15px;
+}
+
+.tg-bus-route-middle small {
+    display: block;
+    color: #a0aab5;
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+/* PRICE */
+
+.tg-bus-price {
+    text-align: right;
+    border-left: 1px dashed #dce3eb;
+    padding-left: 20px;
+}
+
+.tg-bus-price > span {
+    display: block;
+    color: #a1aab6;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tg-bus-price h3 {
+    color: #173451;
+    font-size: 23px;
+    font-weight: 800;
+    margin: 5px 0 12px;
+}
+
+.tg-bus-select-button,
+.tg-bus-selected-button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 17px;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.tg-bus-select-button {
+    background: #123554;
+    color: white;
+}
+
+.tg-bus-select-button:hover {
+    background: #1976c9;
+}
+
+.tg-bus-selected-button {
+    background: #e0f5e9;
+    color: #13824f;
+}
+
+/* SELECTED NOTE */
+
+.tg-bus-selected-note {
+    padding: 11px 25px;
+    background: #effaf3;
+    color: #18834f;
+    border-top: 1px solid #d9f0e1;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* EMPTY RESULT */
+
+.tg-bus-empty {
+    padding: 55px 20px;
+    background: white;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(20, 44, 73, 0.04);
+}
+
+.tg-bus-empty > div {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.tg-bus-empty h3 {
+    color: #173451;
+    font-weight: 800;
+}
+
+.tg-bus-empty p {
+    color: #8995a4;
+    font-size: 14px;
+    max-width: 450px;
+    margin: 10px auto 0;
+}
+
+/* PASSENGER SECTION */
+
+.tg-bus-passenger {
+    background: white;
+    border-radius: 17px;
+    padding: 35px;
+    margin-top: 45px;
+    box-shadow: 0 10px 35px rgba(20, 44, 73, 0.07);
+}
+
+.tg-bus-passenger-heading {
+    margin-bottom: 27px;
+}
+
+.tg-bus-passenger-heading h2 {
+    color: #173451;
+    font-size: 27px;
+    font-weight: 800;
+    margin: 7px 0;
+}
+
+.tg-bus-passenger-heading p {
+    color: #8995a4;
+    font-size: 13px;
+}
+
+/* SUMMARY */
+
+.tg-bus-summary {
+    background: #f5f8fc;
+    border: 1px solid #e8edf4;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 32px;
+}
+
+.tg-bus-summary-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 1px dashed #d7e0e9;
+}
+
+.tg-bus-summary-route > div:not(.tg-bus-summary-icon) {
+    flex: 1;
+}
+
+.tg-bus-summary-route > div:last-child {
+    text-align: right;
+}
+
+.tg-bus-summary-route span {
+    color: #9aa5b2;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tg-bus-summary-route h3 {
+    color: #173451;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 6px 0;
+}
+
+.tg-bus-summary-route p {
+    color: #6f7e90;
+    font-size: 12px;
+    margin: 0;
+}
+
+.tg-bus-summary-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #e5f1ff;
+    color: #1976c9;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.tg-bus-summary-details {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding-top: 22px;
+}
+
+.tg-bus-summary-details span {
+    display: block;
+    color: #99a4b0;
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.tg-bus-summary-details strong {
+    color: #29415b;
+    font-size: 13px;
+}
+
+.tg-bus-summary-details .tg-bus-total strong {
+    color: #e18b00;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* PASSENGER FORM */
+
+.tg-bus-passenger-form h3 {
+    color: #173451;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.tg-bus-passenger-form label {
+    display: block;
+    color: #52657a;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.tg-bus-passenger-form input {
+    width: 100%;
+    height: 49px;
+    padding: 0 14px;
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    background: #fbfcfe;
+    color: #173451;
+    font-size: 13px;
+    outline: none;
+    transition: 0.25s;
+}
+
+.tg-bus-passenger-form input:focus {
+    border-color: #2383cf;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(35, 131, 207, 0.10);
+}
+
+.tg-bus-passenger-form input::placeholder {
+    color: #a5afbb;
+}
+
+/* CONFIRM AREA */
+
+.tg-bus-confirm-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid #edf0f4;
+    margin-top: 30px;
+    padding-top: 25px;
+}
+
+.tg-bus-confirm-area > div span {
+    color: #9aa5b2;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tg-bus-confirm-area h3 {
+    color: #e18b00;
+    font-size: 26px;
+    font-weight: 800;
+    margin: 5px 0 0;
+}
+
+.tg-bus-confirm-button {
+    border: none;
+    border-radius: 9px;
+    padding: 15px 27px;
+    background: #123554;
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tg-bus-confirm-button span {
+    margin-left: 12px;
+    font-size: 17px;
+}
+
+.tg-bus-confirm-button:hover {
+    background: #1976c9;
+    transform: translateY(-2px);
+}
+
+/* BOTTOM INFORMATION */
+
+.tg-bus-bottom-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 55px;
+}
+
+.tg-bus-bottom-info > div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: white;
+    border: 1px solid #edf0f4;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.tg-bus-bottom-info > div > span {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #edf5ff;
+    color: #1976c9;
+    font-size: 20px;
+}
+
+.tg-bus-bottom-info h4 {
+    color: #203c58;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.tg-bus-bottom-info p {
+    color: #8a97a5;
+    font-size: 11px;
+    margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .tg-bus-ticket-main {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .tg-bus-price {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        border-left: none;
+        border-top: 1px dashed #dce3eb;
+        padding: 18px 0 0;
+    }
+
+    .tg-bus-price h3 {
+        margin: 0;
+    }
+
+    .tg-bus-summary-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tg-bus-bottom-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .tg-bus-hero {
+        min-height: 410px;
+        background-position: center;
+    }
+
+    .tg-bus-overlay {
+        background: rgba(5, 20, 43, 0.80);
+    }
+
+    .tg-bus-hero-content {
+        padding-bottom: 65px;
+    }
+
+    .tg-bus-hero-content h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .tg-bus-hero-content > p {
+        font-size: 14px;
+    }
+
+    .tg-bus-hero-features {
+        gap: 13px;
+        font-size: 11px;
+    }
+
+    .tg-bus-container {
+        margin-top: -45px;
+    }
+
+    .tg-bus-search,
+    .tg-bus-passenger {
+        padding: 22px;
+        border-radius: 13px;
+    }
+
+    .tg-bus-search-heading h2,
+    .tg-bus-results-heading h2,
+    .tg-bus-passenger-heading h2 {
+        font-size: 22px;
+    }
+
+    .tg-bus-search-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 21px;
+    }
+
+    .tg-bus-search-button {
+        width: 100%;
+    }
+
+    .tg-bus-results-heading {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .tg-bus-count {
+        font-size: 9px;
+        padding: 8px 10px;
+    }
+
+    .tg-bus-ticket-main {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+        padding: 22px;
+    }
+
+    .tg-bus-route {
+        gap: 10px;
+    }
+
+    .tg-bus-route-point h3 {
+        font-size: 19px;
+    }
+
+    .tg-bus-route-middle {
+        min-width: 65px;
+    }
+
+    .tg-bus-price {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 5px 10px;
+    }
+
+    .tg-bus-price > span {
+        grid-column: 1 / -1;
+    }
+
+    .tg-bus-price h3 {
+        font-size: 21px;
+    }
+
+    .tg-bus-select-button,
+    .tg-bus-selected-button {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .tg-bus-summary {
+        padding: 17px;
+    }
+
+    .tg-bus-summary-details {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 10px;
+    }
+
+    .tg-bus-confirm-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tg-bus-confirm-button {
+        width: 100%;
+    }
+
+    .tg-bus-bottom-info {
+        gap: 12px;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 380px) {
+    .tg-bus-hero-content h1 {
+        font-size: 31px;
+    }
+
+    .tg-bus-route-point h3 {
+        font-size: 17px;
+    }
+
+    .tg-bus-route-middle {
+        min-width: 50px;
+    }
+
+    .tg-bus-summary-route h3 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,627 @@
+
+/* ==============================
+   MAIN FLIGHT PAGE
+================================ */
+
+.flight-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  padding-bottom: 70px;
+  color: #172d45;
+}
+
+.flight-container {
+  max-width: 1150px;
+}
+
+/* ==============================
+   FLIGHT BANNER
+================================ */
+
+.flight-banner {
+  min-height: 260px;
+  padding: 65px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background:
+    linear-gradient(110deg, rgba(10, 32, 54, 0.92), rgba(17, 67, 103, 0.78)),
+    url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600")
+    center/cover no-repeat;
+}
+
+.flight-banner h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.flight-banner p {
+  font-size: 17px;
+  color: #e0eaf3;
+  margin: 0;
+}
+
+/* ==============================
+   SEARCH FORM
+================================ */
+
+.flight-form-card {
+  background: #ffffff;
+  max-width: 950px;
+  margin: -35px auto 45px;
+  position: relative;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(16, 36, 58, 0.10);
+  border: 1px solid #e9eef5;
+}
+
+.flight-form-card h2,
+.availability-section h2,
+.payment-section h2 {
+  color: #142d48;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.flight-form-card label {
+  color: #34465a;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.flight-form-card input[type="radio"] {
+  accent-color: #e99a00;
+  margin-right: 5px;
+}
+
+.flight-form-card input:not([type="radio"]),
+.flight-form-card select,
+.payment-section .form-control {
+  min-height: 48px;
+  border: 1px solid #dce3ec;
+  border-radius: 8px;
+  background-color: #fbfcfe;
+  font-size: 14px;
+  padding: 10px 13px;
+  color: #172d45;
+}
+
+.flight-form-card input:focus,
+.flight-form-card select:focus,
+.payment-section .form-control:focus {
+  border-color: #e99a00;
+  box-shadow: 0 0 0 3px rgba(233, 154, 0, 0.12);
+  background: #ffffff;
+}
+
+.field-error {
+  display: block;
+  color: #dc3545;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.search-btn {
+  min-height: 50px;
+  background: #ffb703 !important;
+  color: #10243a !important;
+  border: none !important;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 750;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #fb8500 !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   AVAILABILITY SECTION
+================================ */
+
+.availability-section {
+  margin: 45px auto;
+}
+
+.availability-section > p {
+  font-size: 14px;
+}
+
+.no-flights {
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+  padding: 45px 20px;
+  box-shadow: 0 6px 25px rgba(16, 36, 58, 0.06);
+}
+
+.no-flights h4 {
+  color: #142d48;
+  font-weight: 750;
+}
+
+.no-flights p {
+  color: #7b8999;
+  margin: 15px 0 22px;
+}
+
+/* ==============================
+   FLIGHT RESULT CARDS
+================================ */
+
+.flight-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr 1fr 0.9fr auto;
+  align-items: center;
+  gap: 18px;
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid #e8edf3;
+  box-shadow: 0 5px 22px rgba(16, 36, 58, 0.06);
+  transition: 0.3s;
+}
+
+.flight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(16, 36, 58, 0.10);
+}
+
+.flight-airline h5 {
+  color: #142d48;
+  font-size: 16px;
+  font-weight: 750;
+  margin-bottom: 6px;
+}
+
+.flight-airline small,
+.flight-price small {
+  color: #8a97a6;
+  font-size: 12px;
+}
+
+.flight-time h4 {
+  color: #142d48;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.flight-time p {
+  color: #8290a0;
+  font-size: 13px;
+  margin: 0;
+}
+
+.flight-duration {
+  text-align: center;
+  color: #65768a;
+  font-size: 13px;
+}
+
+.flight-duration hr {
+  margin: 8px 0;
+  border-color: #b9c5d1;
+}
+
+.flight-price h4 {
+  color: #159653;
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.book-btn {
+  padding: 10px 18px;
+  border: none !important;
+  border-radius: 8px;
+  background: #ffb703 !important;
+  color: #10243a !important;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.book-btn:hover {
+  background: #fb8500 !important;
+  color: white !important;
+}
+
+.demo-note {
+  text-align: center;
+  color: #8995a4;
+  font-size: 12px;
+  margin-top: 22px;
+}
+
+/* ==============================
+   PAYMENT SECTION
+================================ */
+
+.payment-section {
+  max-width: 900px;
+  margin: 55px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid #e8edf3;
+  box-shadow: 0 10px 32px rgba(16, 36, 58, 0.08);
+  scroll-margin-top: 25px;
+}
+
+.payment-section h4 {
+  color: #142d48;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+/* Selected Flight */
+.selected-flight {
+  background: #f3f7fc;
+  border: 1px solid #e2eaf3;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 25px;
+}
+
+.selected-flight h5 {
+  font-weight: 750;
+}
+
+.selected-flight h4 {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.selected-flight p {
+  color: #7c8998;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.selected-flight span {
+  color: #6e7d8e;
+  font-size: 14px;
+}
+
+.total-price {
+  padding-top: 15px;
+  border-top: 1px solid #dce4ed;
+  color: #159653;
+  font-size: 18px;
+}
+
+/* Payment Options */
+.payment-methods {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 20px;
+  background: #f7f9fc;
+  border: 1px solid #dce4ed;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.payment-option:hover {
+  border-color: #e99a00;
+  background: #fffaf0;
+}
+
+.payment-option input {
+  accent-color: #e99a00;
+}
+
+.payment-option span {
+  color: #34465a;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.payment-error {
+  color: #c62828;
+  background: #fff0f0;
+  border: 1px solid #ffd1d1;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.payment-btn {
+  min-height: 49px;
+  font-weight: 750;
+  border-radius: 8px;
+}
+
+/* ==============================
+   TICKET SECTION
+================================ */
+
+.ticket-section {
+  max-width: 750px;
+  margin: 55px auto;
+  scroll-margin-top: 25px;
+}
+
+.ticket-success {
+  margin-bottom: 25px;
+}
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+  background: #e3f8eb;
+  color: #159653;
+  border-radius: 50%;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.ticket-success h2 {
+  color: #159653;
+  font-weight: 800;
+}
+
+.ticket-success p {
+  color: #778697;
+}
+
+/* Ticket Design */
+.ticket-card {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  border: 1px solid #e2e8ef;
+  box-shadow: 0 10px 30px rgba(16, 36, 58, 0.09);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.ticket-header h3 {
+  color: #142d48;
+  font-weight: 850;
+  margin: 0;
+}
+
+.ticket-header span {
+  background: #eaf2fc;
+  color: #1769b1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.booking-id {
+  text-align: center;
+  padding: 12px;
+}
+
+.booking-id small,
+.ticket-card small {
+  color: #8491a0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.booking-id h3 {
+  color: #1769b1;
+  font-weight: 850;
+  margin-top: 7px;
+}
+
+.ticket-card .row h4 {
+  color: #142d48;
+  font-weight: 800;
+}
+
+.ticket-card .row strong {
+  color: #1769b1;
+}
+
+.ticket-info {
+  margin-top: 20px;
+}
+
+.ticket-info p {
+  color: #596a7c;
+  font-size: 14px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.ticket-info p strong {
+  color: #142d48;
+}
+
+.ticket-footer {
+  text-align: center;
+  background: #f3f7fc;
+  color: #52677c;
+  padding: 18px;
+  margin-top: 25px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Ticket Buttons */
+.ticket-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.ticket-actions button {
+  min-width: 180px;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 1000px) {
+  .flight-card {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .flight-card .book-btn {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .flight-banner {
+    min-height: 220px;
+    padding: 50px 15px;
+  }
+
+  .flight-banner h1 {
+    font-size: 31px;
+  }
+
+  .flight-banner p {
+    font-size: 14px;
+  }
+
+  .flight-form-card {
+    padding: 25px 20px;
+    margin-top: -25px;
+  }
+
+  .flight-form-card h2,
+  .availability-section h2,
+  .payment-section h2 {
+    font-size: 23px;
+  }
+
+  .flight-card {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .flight-duration {
+    grid-column: 1 / -1;
+  }
+
+  .payment-section {
+    padding: 25px 20px;
+  }
+
+  .ticket-card {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flight-banner h1 {
+    font-size: 26px;
+  }
+
+  .flight-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flight-airline {
+    grid-column: 1 / -1;
+  }
+
+  .flight-price {
+    grid-column: 1 / -1;
+  }
+
+  .flight-card .book-btn {
+    grid-column: 1 / -1;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+  }
+
+  .payment-option {
+    width: 100%;
+  }
+
+  .ticket-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ticket-actions {
+    flex-direction: column;
+  }
+
+  .ticket-actions button {
+    width: 100%;
+  }
+}
+
+/* ==============================
+   PRINT TICKET
+================================ */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .ticket-section,
+  .ticket-section * {
+    visibility: visible;
+  }
+
+  .ticket-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .ticket-actions {
+    display: none !important;
+  }
+
+  .ticket-card {
+    box-shadow: none;
+    border: 1px solid #cccccc;
+  }
+}
